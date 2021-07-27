@@ -1,0 +1,62 @@
+---
+
+- hosts: ap, apbill
+  become: yes
+  become_user: root
+  become_method: sudo
+  vars_files:
+    - '{{ inventory_dir }}/vars/{{ project }}_ap.yml'
+
+  tasks:
+
+    - name: install required package
+      when: ansible_distribution == 'CentOS' or ansible_distribution == "Amazon"
+      yum: name=perl-XML-Simple state=present
+
+    - name: create symlink tomcat munin plugins
+      notify: restart munin-node
+      file: src=/usr/share/munin/plugins/{{ item }} dest=/etc/munin/plugins/{{ item }} owner=root group=root state=link
+      with_items:
+        - 'tomcat_access'
+        - 'tomcat_jvm'
+        - 'tomcat_threads'
+        - 'tomcat_volume'
+
+    - name: create munin plugin config
+      when: project == 'pokecolo'
+      copy: src={{ inventory_dir }}/files/ap/munin/plugin-conf.d/app_ dest=/etc/munin/plugin-conf.d/app_
+
+    - name: create munin plugin config tomcat
+      when: project == 'pokecolo'
+      template: src={{ inventory_dir }}/templates/ap/munin/plugin-conf.d/{{ item }}.j2 dest=/etc/munin/plugin-conf.d/{{ item }}
+      with_items:
+        - 'tomcat'
+        - 'tomcat2'
+
+    - name: create directory for munin plugin needed files
+      when: project == 'pokecolo'
+      file: path=/home/coco/bin/app state=directory owner=coco group=coco mode=0755
+
+    - name: create munin plugin needed files
+      when: project == 'pokecolo'
+      copy: src={{ inventory_dir }}/files/ap/munin/app/{{ item }} dest=/home/coco/bin/app/{{ item }} owner=coco group=coco mode=0755
+      with_items:
+        - 'munin_rof.sh'
+        - 'munin_rta.sh'
+        - 'munin_rth.sh'
+
+    - name: create munin plugins
+      when: project == 'pokecolo'
+      copy: src={{ inventory_dir }}/files/ap/munin/plugins/{{ item }} dest=/usr/share/munin/plugins/{{ item }} owner=root group=root mode=0755
+      with_items: "{{ ap_munin_plugins }}"
+
+    - name: create symlink munin plugins
+      when: project == 'pokecolo'
+      notify: restart munin-node
+      file: src=/usr/share/munin/plugins/{{ item }} dest=/etc/munin/plugins/{{ item }} owner=root group=root state=link
+      with_items: "{{ ap_munin_plugins }}"
+
+  handlers:
+
+    - name: restart munin-node
+      service: name=munin-node state=restarted enabled=yes

@@ -1,0 +1,20 @@
+---
+
+- hosts: ap, apdl, apup, apbill, wp, cms
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+
+    - name: create symlink munin plugins
+      notify: restart munin-node
+      file: src=/usr/share/munin/plugins/{{ item }} dest=/etc/munin/plugins/{{ item }} owner=root group=root state=link
+      with_items:
+        - 'nginx_request'
+        - 'nginx_status'
+
+  handlers:
+
+    - name: restart munin-node
+      service: name=munin-node state=restarted enabled=yes

@@ -1,0 +1,42 @@
+---
+
+- hosts: mq
+  become: yes
+  become_user: root
+  become_method: sudo
+  vars_files:
+    - '{{ inventory_dir }}/vars/{{ project }}_mq.yml'
+
+  tasks:
+
+    - name: create rabbitmq munin plugins
+      when: ansible_distribution == 'CentOS' or ansible_distribution == "Amazon"
+      copy: src={{ inventory_dir }}/files/mq/munin-plugins/rabbitmq_{{ item }} dest=/usr/share/munin/plugins/rabbitmq_{{ item }} owner=root group=root mode=0755
+      with_items:
+        - 'connections'
+        - 'consumers'
+        - 'messages'
+        - 'messages_unacknowledged'
+        - 'messages_uncommitted'
+        - 'queue_memory'
+
+    - name: configuration rabbitmq munin plugin
+      when: ansible_distribution == 'CentOS' or ansible_distribution == "Amazon"
+      template: src={{ inventory_dir }}/templates/mq/munin/plugin-conf.d/rabbitmq.j2 dest=/etc/munin/plugin-conf.d/rabbitmq
+
+    - name: create symlink munin plugins
+      notify: restart munin-node
+      file: src=/usr/share/munin/plugins/rabbitmq_{{ item }} dest=/etc/munin/plugins/rabbitmq_{{ item }} owner=root group=root state=link
+      with_items:
+        - 'connections'
+        - 'consumers'
+        - 'messages'
+        - 'messages_unacknowledged'
+        - 'messages_uncommitted'
+        - 'queue_memory'
+
+
+  handlers:
+
+    - name: restart munin-node
+      service: name=munin-node state=restarted enabled=yes

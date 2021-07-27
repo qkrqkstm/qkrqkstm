@@ -1,0 +1,69 @@
+---
+
+- hosts: all
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+
+    - block:
+      - name: Remove the tlinux-sendmail
+        yum:
+          name: 'tlinux-sendmail'
+          state: absent
+      - name: Install the postfix
+        yum:
+          name: 'postfix'
+          state: latest
+      when: location == 'ten' and ansible_distribution == 'CentOS'
+
+    - block:
+      - name: Install postfix on CentOS 8 in GCP or AWS
+        yum:
+          name: postfix
+          state: latest
+      when: (location == 'gcp' or location is match('aws')) and ansible_distribution == 'CentOS' and ansible_distribution_major_version|int == 8
+
+    - name: configure alias
+      when: location != 'ali' and (ansible_distribution == 'CentOS' or ansible_distribution == "Amazon")
+      notify: create new alias db
+      copy: src={{ inventory_dir }}/files/common/aliases dest=/etc/aliases
+
+    - name: configure postfix main.cf of CentOS
+      when: location != 'ali' and ansible_distribution == 'CentOS'
+      notify: restart postfix
+      copy: src={{ inventory_dir }}/files/common/main.cf.{{ ansible_distribution }}_{{ ansible_distribution_major_version }} dest=/etc/postfix/main.cf
+
+    - block:
+      - name: Modify the /etc/hosts
+        replace:
+          dest: '/etc/hosts'
+          regexp: '^::1'
+          replace: '#::1'
+        notify: restart postfix
+      when: location == 'ten' and ansible_distribution == 'CentOS'
+
+    - name: configure postfix main.cf of Amazon
+      when: ansible_distribution == 'Amazon'
+      notify: restart postfix
+      copy: src={{ inventory_dir }}/files/common/main.cf.{{ ansible_distribution }}_{{ ansible_distribution_version }} dest=/etc/postfix/main.cf
+
+    - name: Modify Service sendmail
+      when: ansible_distribution == 'Amazon' and ansible_distribution_version == '2018.03'
+      service:
+        name: sendmail
+        state: stopped
+        enabled: no
+
+    - name: Modify Alternatives MTA to postfix
+      when: ansible_distribution == 'Amazon' and ansible_distribution_version == '2018.03'
+      alternatives: name=mta path=/usr/sbin/sendmail.postfix link=/usr/sbin/sendmail
+
+  handlers:
+
+    - name: create new alias db
+      command: /usr/sbin/postalias /etc/aliases
+
+    - name: restart postfix
+      service: name=postfix state=restarted enabled=yes

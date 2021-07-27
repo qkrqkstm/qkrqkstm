@@ -1,0 +1,13 @@
+---
+
+- hosts: mq
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+
+    - name: configure sysctl
+      sysctl: sysctl_file=/etc/sysctl.conf state=present reload=yes name={{ item.name }} value={{ item.value }}
+      with_items:
+        - { name: 'vm.zone_reclaim_mode', value: '0' }

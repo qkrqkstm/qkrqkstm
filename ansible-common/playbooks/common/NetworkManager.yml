@@ -1,0 +1,66 @@
+---
+
+- hosts: all
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+
+    - block:
+      - name: set dns=none in NetworkManager.conf
+        lineinfile:
+          path: /etc/NetworkManager/NetworkManager.conf
+          regexp: '^dns=none'
+          insertafter: '^\[main\]'
+          line: 'dns=none'
+        notify:
+          - restart NetworkManager
+
+      - name: insert PEERDNS=no into ifcfg-eth0 (GCP only)
+        lineinfile:
+          path: /etc/sysconfig/network-scripts/ifcfg-eth0
+          regexp: '^PEERDNS='
+          line: 'PEERDNS=no'
+        notify:
+          - restart NetworkManager
+          - delete default nameserver line from /etc/resolv.conf
+          - add nameserver line into /etc/resolv.conf
+      when: location == 'gcp' and ansible_distribution == 'CentOS' and ansible_distribution_major_version|int <= 7
+
+    - block:
+      - name: set dns=none in NetworkManager.conf
+        lineinfile:
+          path: /etc/NetworkManager/NetworkManager.conf
+          regexp: '^dns=none'
+          insertafter: '^\[main\]'
+          line: 'dns=none'
+        notify:
+          - restart NetworkManager
+          - delete default nameserver line from /etc/resolv.conf
+          - add nameserver line into /etc/resolv.conf
+      when: location == 'gcp' and ansible_distribution == 'CentOS' and ansible_distribution_major_version|int == 8
+
+
+  handlers:
+
+    - name: restart NetworkManager
+      when: location == 'gcp' and ansible_distribution == 'CentOS'
+      service: name=NetworkManager state=restarted enabled=yes
+
+    - name: delete default nameserver line from /etc/resolv.conf
+      when: location == 'gcp' and ansible_distribution == 'CentOS'
+      lineinfile:
+        path: /etc/resolv.conf
+        regexp: '^nameserver 169.254.169.254'
+        state: absent
+
+    - name: add nameserver line into /etc/resolv.conf
+      when: location == 'gcp' and ansible_distribution == 'CentOS'
+      lineinfile:
+        path: /etc/resolv.conf
+        regexp: '^nameserver {{ item }}'
+        line: 'nameserver {{ item }}'
+      with_items:
+        - '10.81.254.2'
+        - '10.81.254.3'

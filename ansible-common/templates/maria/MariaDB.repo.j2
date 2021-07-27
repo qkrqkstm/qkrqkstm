@@ -1,0 +1,75 @@
+{% if ansible_distribution == 'CentOS' and ansible_architecture == "x86_64" %}
+{% if ansible_distribution_major_version|int == 7 %}
+[mariadb55]
+name = MariaDB
+baseurl = http://yum.mariadb.org/5.5/centos7-amd64
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+enabled=0
+gpgcheck=1
+
+[mariadb10.2]
+name = MariaDB
+baseurl = http://yum.mariadb.org/10.2/centos7-amd64
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+enabled=0
+gpgcheck=1
+
+[mariadb10.3]
+name = MariaDB
+baseurl = http://yum.mariadb.org/10.3/centos7-amd64
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+enabled=0
+gpgcheck=1
+
+[mariadb10.4]
+name = MariaDB
+baseurl = http://yum.mariadb.org/10.4/centos7-amd64
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+enabled=0
+gpgcheck=1
+{% endif %}
+
+{% if ansible_distribution_major_version|int == 8 %}
+[mariadb10.3]
+name = MariaDB
+baseurl = http://yum.mariadb.org/10.3/centos8-amd64
+module_hotfixes=1
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+enabled=0
+gpgcheck=1
+{% endif %}
+{% endif %}
+
+{% if ansible_distribution == 'Amazon' and ansible_distribution_version == "2" %} 
+{% if ansible_architecture == "x86_64" %}
+[mariadb55]
+name = MariaDB
+baseurl = http://yum.mariadb.org/5.5/centos7-amd64
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+enabled=0
+gpgcheck=1
+
+[mariadb10.3]
+name = MariaDB
+baseurl = http://yum.mariadb.org/10.3/centos7-amd64
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+enabled=0
+gpgcheck=1
+{% endif %}
+
+{% if ansible_architecture == "aarch64" %}
+[mariadb55]
+name = MariaDB
+baseurl = http://yum.mariadb.org/5.5/centos7-aarch64
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+enabled=0
+gpgcheck=1
+
+[mariadb10.3]
+name = MariaDB
+baseurl = http://yum.mariadb.org/10.3/centos7-aarch64
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+enabled=0
+gpgcheck=1
+{% endif %}
+{% endif %}

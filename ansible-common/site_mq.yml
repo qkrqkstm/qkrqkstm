@@ -1,0 +1,6 @@
+---
+
+
+- include: './playbooks/mq/munin-plugins.yml'
+- include: './playbooks/mq/sysctl.yml'
+- include: './playbooks/mq/ulimit.yml'

@@ -1,0 +1,27 @@
+---
+
+- hosts: ap, apdl, apup, apbill, cms
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+
+    - name: create coco user
+      when: project == 'pokecolo' and ansible_distribution == 'CentOS' and ansible_distribution_major_version|int >= 7
+      user: name=coco
+            shell=/bin/bash
+            groups=adm,wheel,systemd-journal
+            append=yes
+
+    - name: create coco user
+      when: project == 'pokecolo' and ansible_distribution == 'CentOS' and ansible_distribution_major_version|int <= 6
+      user: name=coco
+            shell=/bin/bash
+            groups=wheel
+            append=yes
+
+    - name: set password for coco user.
+      when: project == 'pokecolo'
+      user: name=coco
+            password={{ lookup('file', "{{ inventory_dir }}/private/coco_password_hashed_pokecolo") }}

@@ -1,0 +1,5 @@
+[ap]
+#syf-es-0.cocone location=aws project=vita-en env=real
+#syf-lk-0.cocone location=aws project=vita-en env=real
+syf-alpha-bi-0.cocone location=aws project=vita-en env=real
+syf-bi-0.cocone location=aws project=vita-en env=real

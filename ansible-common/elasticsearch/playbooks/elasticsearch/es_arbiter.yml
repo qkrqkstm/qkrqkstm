@@ -1,0 +1,23 @@
+- name: Elasticsearch with data node configuration in cluster
+  hosts: es_arbiter
+  roles:
+    - role: roles/elasticsearch
+  vars:
+  # es_version: 7.10.2   # Enter the appropriate version for your environment
+    es_data_dirs: "/usr/local/elasticsearch/data"
+    es_log_dirs: "usr/local/elasticsearch/logs"
+  # es_heap_size: "4g"   # if instance memory is setting 8GB and you have to setting 4g. ex 32/8=4
+    es_config:
+      cluster.name: "es-cluster"
+  #   cluster.initial_master_nodes: "node1,node2,node3"   # enter the node name
+  #   discovery.seed_hosts: "192.168.0.1,192.168.0.2,192.168.0.3"  # enter ip or host name of  master node and data node and arbiter.
+      http.port: 9200
+      node.name: node2
+      node.data: true    # when using data is true. false is arbiter.
+      node.master: true
+      node.ml: true
+      node.ingest: true
+      bootstrap.memory_lock: false  # if don't use swap space
+      network.host: 0.0.0.0
+    es_plugins:
+     - plugin: ingest-attachment

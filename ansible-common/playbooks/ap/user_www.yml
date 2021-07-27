@@ -1,0 +1,56 @@
+---
+
+- hosts: ap, apup, apdl, apbill, maint, cms
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+
+    - name: create www user
+      user: name=www shell=/bin/bash
+
+    - name: add www user to wheel group
+      when: (project == 'pannotia' or project == 'vita' or project == 'pen' or project == 'biblia' ) and
+            ansible_distribution == 'CentOS' and ansible_distribution_major_version|int >= 7
+      user: name=www groups=adm,wheel,systemd-journal append=yes
+
+    - name: set password for www user
+      user: name=www
+            password={{ lookup('file', "{{ inventory_dir }}/private/www_password_hashed_{{ project }}") }}
+
+    - name: add SSH pubkey for www user
+      authorized_key: user=www key={{ item }}
+      with_file:
+        - "{{ inventory_dir }}/private/public_keys/www"
+
+    - name: add SSH pubkey for www user
+      when: project == 'pad'
+      authorized_key: user=www key={{ item }}
+      with_file:
+        - "{{ inventory_dir }}/private/public_keys/www"
+        - "{{ inventory_dir }}/private/public_keys/kwon_juhye"
+
+    - name: add SSH pubkey for www user
+      when: project == 'vita-en'
+      authorized_key: user=www key={{ item }}
+      with_file:
+        - "{{ inventory_dir }}/private/public_keys/www"
+        - "{{ inventory_dir }}/private/public_keys/son_yoohan"
+        - "{{ inventory_dir }}/private/public_keys/sung_younseok"
+
+    - name: add SSH pubkey for www user
+      when: project == 'tw-sparty' or project == 'sparty'
+      authorized_key: user=www key={{ item }}
+      with_file:
+        - "{{ inventory_dir }}/private/public_keys/www"
+        - "{{ inventory_dir }}/private/public_keys/cho_changhee"
+        - "{{ inventory_dir }}/private/public_keys/kang_munjin"
+        - "{{ inventory_dir }}/private/public_keys/lee_jongil"
+        - "{{ inventory_dir }}/private/public_keys/lee_gihwan"
+        - "{{ inventory_dir }}/private/public_keys/so_dahae"
+        - "{{ inventory_dir }}/private/public_keys/jeong_dongyoung"
+
+    - name: create private key for www user
+      when: project != 'pen-anysense' and project != 'story'
+      copy: src="{{ inventory_dir }}/private/www_id_rsa" dest=/home/www/.ssh/www-nopass mode=0600 owner=www group=www

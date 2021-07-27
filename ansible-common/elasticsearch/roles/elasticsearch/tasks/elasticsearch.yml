@@ -1,0 +1,5 @@
+---
+
+- name: Include specific Elasticsearch
+  include: elasticsearch-CentOS.yml
+  when: ansible_distribution == 'CentOS'

@@ -1,0 +1,20 @@
+---
+
+- hosts: mongo, mongod, mongos, mongoc
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+
+    - name: configure ulimit
+      pam_limits: dest=/etc/security/limits.conf domain={{ item.domain }} limit_type={{ item.type }} limit_item={{ item.item }} value={{ item.value }}
+      with_items:
+        - { domain: 'root', type: 'soft', item: 'nofile', value: '65500' }
+        - { domain: 'root', type: 'hard', item: 'nofile', value: '65500' }
+        - { domain: 'root', type: 'soft', item: 'nproc', value: '44769' }
+        - { domain: 'root', type: 'hard', item: 'nproc', value: '44769' }
+        - { domain: 'mongodb', type: 'soft', item: 'nofile', value: '64000' }
+        - { domain: 'mongodb', type: 'hard', item: 'nofile', value: '64000' }
+        - { domain: 'mongodb', type: 'soft', item: 'nproc', value: '64000' }
+        - { domain: 'mongodb', type: 'hard', item: 'nproc', value: '64000' }

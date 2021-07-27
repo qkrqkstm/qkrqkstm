@@ -1,0 +1,21 @@
+---
+
+- hosts: maria, maria10.2, maria10.3, mysql
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+
+    - name: configure sysctl
+      sysctl: sysctl_file=/etc/sysctl.conf state=present reload=yes name={{ item.name }} value={{ item.value }}
+      with_items:
+        - { name: 'kernel.pid_max', value: '32768' }
+        - { name: 'kernel.threads-max', value: '15623' }
+        - { name: 'vm.max_map_count', value: '65530' }
+        - { name: 'vm.overcommit_memory', value: '0' }
+        - { name: 'vm.overcommit_ratio', value: '50' }
+        - { name: 'net.ipv6.conf.all.disable_ipv6', value: '0' }
+        - { name: 'net.ipv6.conf.default.disable_ipv6', value: '0' }
+        - { name: 'vm.swappiness', value: '0' }
+        - { name: 'vm.zone_reclaim_mode', value: '0' }

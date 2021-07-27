@@ -1,0 +1,8 @@
+[ap]
+ansible-test-0.cocone ansible_host=10.70.70.40 location=aws env=alpha
+
+[mongo]
+ansible-test-0.cocone ansible_host=10.70.70.40 location=aws env=alpha
+
+[redis]
+ansible-test-0.cocone ansible_host=10.70.70.40 location=aws env=alpha

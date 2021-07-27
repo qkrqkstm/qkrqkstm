@@ -1,0 +1,3 @@
+[ap]
+en-sparty-ap-3.cocone location=aws project=tw-sparty env=real
+en-sparty-ap-4.cocone location=aws project=tw-sparty env=real

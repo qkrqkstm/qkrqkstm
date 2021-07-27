@@ -1,0 +1,27 @@
+---
+
+- hosts: ap, apup, wp, cms
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+
+    - name: create nginx repo file for CentOS
+      when: ansible_distribution == 'CentOS' and ansible_distribution_major_version|int >= 6
+      copy: src={{ inventory_dir }}/files/ap/nginx-{{ ansible_distribution_major_version }}.repo dest=/etc/yum.repos.d/nginx.repo owner=root group=root mode=0644
+
+    - name: create nginx repo file for AmazonLinux2
+      when: ansible_distribution == "Amazon" and ansible_distribution_version == "2"
+      copy: src={{ inventory_dir }}/files/ap/nginx-{{ansible_distribution}}_{{ ansible_distribution_version }}.repo dest=/etc/yum.repos.d/nginx.repo owner=root group=root mode=0644
+
+    - name: install nginx
+      when: ansible_distribution == 'CentOS' or ansible_distribution == "Amazon"
+      notify: restart nginx
+      yum: name="nginx" enablerepo=nginx state=present
+
+  handlers:
+
+    - name: restart nginx
+      when: ansible_distribution == 'CentOS' or ansible_distribution == "Amazon"
+      service: name=nginx state=restarted enabled=yes

@@ -1,0 +1,5 @@
+---
+
+- include: './playbooks/redis/munin-plugins.yml'
+- include: './playbooks/redis/zabbix-agent.yml'
+- include: './playbooks/redis/rclocal.yml'

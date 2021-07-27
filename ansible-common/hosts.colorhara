@@ -1,0 +1,17 @@
+[common]
+color-hara-alpha-0.gcpccn location=gcp project=tw-sparty env=real
+color-hara-alpha-1.gcpccn location=gcp project=tw-sparty env=real
+color-hara-ap-0.gcpccn location=gcp project=tw-sparty env=real
+color-hara-ap-1.gcpccn location=gcp project=tw-sparty env=real
+color-hara-db-0.gcpccn location=gcp project=tw-sparty env=real
+color-hara-db-1.gcpccn location=gcp project=tw-sparty env=real
+color-hara-db-2.gcpccn location=gcp project=tw-sparty env=real
+color-hara-db-3.gcpccn location=gcp project=tw-sparty env=real
+color-hara-nfs-ap-0.gcpccn location=gcp project=tw-sparty env=real
+color-hara-test-0.gcpccn location=gcp project=tw-sparty env=real
+kr-homep-alpha-0.gcpccn location=gcp project=tw-sparty env=real
+kr-homep-ap-0.gcpccn location=gcp project=tw-sparty env=real
+kr-homep-db-0.gcpccn location=gcp project=tw-sparty env=real
+hello-ap-0.gcpccn location=gcp project=tw-sparty env=real
+hello-db-0.gcpccn location=gcp project=tw-sparty env=real
+hello-db-1.gcpccn location=gcp project=tw-sparty env=real

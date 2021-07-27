@@ -1,0 +1,44 @@
+---
+
+- hosts: all
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+
+    - name: create ansible user
+      when: ansible_distribution == 'CentOS' and ansible_distribution_major_version|int <= 6 and
+            (project == 'billing' or project == 'ai' or project == 'bi')
+      user: name=ansible
+            shell=/bin/bash
+            groups=wheel
+            append=yes
+
+    - name: create ansible user
+      when: ((ansible_distribution == 'CentOS' and ansible_distribution_major_version|int >= 7) or (ansible_distribution == "Amazon" and ansible_distribution_version == "2")) and
+            (project == 'billing' or project == 'ai' or project == 'bi')
+      user: name=ansible
+            shell=/bin/bash
+            groups=adm,wheel,systemd-journal
+            append=yes
+
+    - name: create ansible user
+      when: ansible_distribution == 'Ubuntu' and
+            (project == 'billing' or project == 'ai' or project == 'bi')
+      user: name=ansible
+            shell=/bin/bash
+            groups=adm,sudo
+            append=yes
+
+    - name: set ansible user password
+      when: project == 'billing' or project == 'ai' or project == 'bi'
+      user: name=ansible
+            password={{ lookup('file', '{{ inventory_dir }}/private/ansible_{{ env }}_password_hashed') }}
+
+    - name: add ansible user pubkey
+      authorized_key: user=ansible key="{{ item }}"
+      when: project == 'billing' or project == 'ai' or project == 'bi'
+      with_file:
+        - "{{ inventory_dir }}/private/public_keys/ansible_{{ env }}"
+

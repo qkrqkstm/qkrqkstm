@@ -1,0 +1,6 @@
+---
+
+mariadb_port: 3306
+mariadb_path: '/usr/local/mysql/bin'
+mariadb_socket_path: '/usr/local/mysql/tmp/mysql.sock'
+mariadb_monitor_password: "{{ lookup('file', '{{ inventory_dir }}/private/mariadb_monitor_password') }}"

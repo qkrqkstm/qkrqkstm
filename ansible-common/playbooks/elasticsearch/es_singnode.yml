@@ -1,0 +1,23 @@
+- name: Elasticsearch with custom configuration
+  hosts: es_single_node
+  roles:
+    - role: roles/elastic.elasticsearch
+  vars:
+    es_version: 7.10.2
+    es_data_dirs:
+      - "/usr/local/elasticsearch/data"
+    es_log_dir: "/usr/local/elasticsearch/logs"
+    es_config:
+      node.name: "es_node1"
+      cluster.name: "es_cluster"
+      discovery.seed_hosts: "es_single_node:9301"
+      http.port: 9201
+      transport.port: 9301
+      node.data: false
+      node.master: true
+      bootstrap.memory_lock: true
+    es_heap_size: 1g
+    es_start_service: false
+    es_api_port: 9201
+    es_plugins:
+      - plugin: ingest-attachment

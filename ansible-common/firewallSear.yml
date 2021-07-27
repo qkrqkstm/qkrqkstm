@@ -1,0 +1,18 @@
+---
+
+- hosts: nbp
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+
+     - name: firewall-cmd check Centos 7
+       when: ansible_distribution == 'CentOS' and ansible_distribution_major_version|int >= 7
+       shell: firewall-cmd --zone=public --list-all
+       register: result
+     - name: iptables check Centos 6
+       when: ansible_distribution == 'CentOS' and ansible_distribution_major_version|int <= 6
+       shell: iptables -L
+       register: result
+     - debug: var=result

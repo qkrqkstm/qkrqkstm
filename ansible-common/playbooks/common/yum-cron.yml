@@ -1,0 +1,18 @@
+---
+
+- hosts: all
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+
+    - block:
+      - name: remove the yum-cron package on CentOS 7 or earleir
+        when: ansible_distribution_major_version|int <= 7
+        yum: name=yum-cron state=absent
+
+      - name: remove the dnf-automatic package on CentOS 8
+        when: ansible_distribution_major_version|int == 8
+        yum: name=dnf-automatic state=absent
+      when: location == 'gcp' and ansible_distribution == 'CentOS'

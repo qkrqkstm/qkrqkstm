@@ -1,0 +1,22 @@
+---
+
+- hosts: all
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+
+    - block:
+      - name: Created slice disable
+        notify: restart rsyslog
+        template: src={{ inventory_dir }}/templates/common/ignore-systemd-session-slice.conf.j2 dest=/etc/rsyslog.d/ignore-systemd-session-slice.conf
+
+      - name: set permission messages
+        file: path=/var/log/messages mode=0644
+      when: (ansible_distribution == 'CentOS' and ansible_distribution_major_version|int >= 7) or (ansible_distribution == "Amazon" and ansible_distribution_version == "2")
+
+  handlers:
+
+    - name: restart rsyslog
+      service: name=rsyslog state=restarted

@@ -1,0 +1,8 @@
+# statusが取れるかどうか
+UserParameter=mongodb.ok,status="$(echo 'db.serverStatus().ok' | /usr/local/mongodb/bin/mongo --quiet --port {{ mongod_port }} -u monitor -p {{ mongod_monitor_password }} admin 2>/dev/null | head -n 1)" ; if [ "x${status}" = 'x1' ] ; then echo 1 ; else echo 0 ; fi ; unset status
+
+# replicaset
+UserParameter=mongodb.rsok,/bin/echo "rs.status()" | /usr/local/mongodb/bin/mongo --port {{ mongod_port }} -u monitor -p {{ mongod_monitor_password }} admin | grep stateStr | grep -v -E 'PRIMARY|SECONDARY|ARBITER' -c
+
+# その他ステータスへのアクセスすべて
+UserParameter=mongodb.status[*],/bin/echo "db.serverStatus().$1" | /usr/local/mongodb/bin/mongo --port {{ mongod_port }} -u monitor -p {{ mongod_monitor_password }} admin | grep "$2"|awk -F: '{print $$2}'|awk -F, '{print $$1}'

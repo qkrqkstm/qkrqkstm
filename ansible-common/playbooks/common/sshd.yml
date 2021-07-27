@@ -1,0 +1,42 @@
+---
+
+- hosts: all
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+
+    - name: configuration sshd
+      when: ansible_distribution == 'CentOS'
+      notify: restart sshd
+      template: src={{ inventory_dir }}/templates/common/sshd_config.{{ ansible_distribution }}_{{ ansible_distribution_major_version }}.j2 dest=/etc/ssh/sshd_config
+
+    - name: Modify the ssh-port
+      lineinfile:
+        dest: '/etc/ssh/sshd_config'
+        regexp: '#Port 22'
+        line: 'Port 36000'
+        backrefs: yes
+      notify: restart sshd
+      when: location == 'ten' 
+
+    - name: configuration sshd
+      when: ansible_distribution == 'Amazon'
+      notify: restart sshd
+      template: src={{ inventory_dir }}/templates/common/sshd_config.{{ ansible_distribution }}_{{ ansible_distribution_version }}.j2 dest=/etc/ssh/sshd_config
+
+    - name: configuration sshd
+      when: ansible_distribution == 'Ubuntu'
+      notify: restart ssh
+      template: src={{ inventory_dir }}/templates/common/sshd_config.{{ ansible_distribution }}_{{ ansible_distribution_major_version }}.j2 dest=/etc/ssh/sshd_config
+
+
+  handlers:
+
+    - name: restart sshd
+      service: name=sshd state=restarted enabled=yes
+
+    - name: restart ssh
+      when: ansible_distribution == 'Ubuntu'
+      service: name=ssh state=restarted enabled=yes

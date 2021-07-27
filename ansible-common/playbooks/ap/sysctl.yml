@@ -1,0 +1,17 @@
+---
+
+- hosts: ap, apdl, apup, apbill
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+
+    - name: configure sysctl
+      sysctl: sysctl_file=/etc/sysctl.conf state=present reload=yes name={{ item.name }} value={{ item.value }}
+      with_items:
+        - { name: 'kernel.pid_max', value: '262144' }
+        - { name: 'kernel.threads-max', value: '262144' }
+        - { name: 'vm.max_map_count', value: '262144' }
+        - { name: 'net.ipv6.conf.all.disable_ipv6', value: '1' }
+        - { name: 'net.ipv6.conf.default.disable_ipv6', value: '1' }

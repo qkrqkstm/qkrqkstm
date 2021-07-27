@@ -1,0 +1,22 @@
+---
+
+- hosts: mongo, mongod
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+
+    - name: configure firewall access to mongod from cocone
+      notify: restart firewalld
+      when: ansible_distribution == 'CentOS' and ansible_distribution_major_version|int >= 7 and location == 'nbp'
+      firewalld: permanent=true zone=public state=enabled rich_rule="rule family=ipv4 source address={{ item.address }} port port={{ item.port }} protocol=tcp accept"
+      with_items:
+        - { address: "202.94.128.228", port: "30001" }
+        - { address: "152.165.119.106", port: "30001" }
+        - { address: "150.249.235.253", port: "30001" }
+
+  handlers:
+
+    - name: restart firewalld
+      service: name=firewalld state=restarted enabled=yes

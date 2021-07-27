@@ -1,0 +1,5 @@
+---
+
+- name: Include specific Elasticsearch
+  include: elasticsearch-RedHat.yml
+  when: ansible_os_family == 'CentOS'

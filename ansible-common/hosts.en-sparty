@@ -1,0 +1,36 @@
+[ap]
+en-sparty-ap-0.cocone location=aws project=tw-sparty env=real
+en-sparty-ap-1.cocone location=aws project=tw-sparty env=real
+en-sparty-ap-2.cocone location=aws project=tw-sparty env=real
+en-sparty-ap-bill-0.cocone location=aws project=tw-sparty env=real
+en-sparty-ap-bill-1.cocone location=aws project=tw-sparty env=real
+en-sparty-cms-0.cocone location=aws project=tw-sparty env=real
+en-sparty-alpha-0.cocone location=aws project=tw-sparty env=real
+en-sparty-alpha-1.cocone location=aws project=tw-sparty env=real
+en-sparty-alpha-db-0.cocone location=aws project=tw-sparty env=real
+en-sparty-alpha-db-1.cocone location=aws project=tw-sparty env=real
+
+[mongo]
+en-sparty-mongoc-0.cocone location=aws project=tw-sparty env=real
+en-sparty-mongoc-1.cocone location=aws project=tw-sparty env=real
+en-sparty-mongoc-2.cocone location=aws project=tw-sparty env=real
+en-sparty-mongoc-log-0.cocone location=aws project=tw-sparty env=real
+en-sparty-mongoc-log-1.cocone location=aws project=tw-sparty env=real
+en-sparty-mongoc-log-2.cocone location=aws project=tw-sparty env=real
+en-sparty-mongod-log-0.cocone location=aws project=tw-sparty env=real
+en-sparty-mongod-log-1.cocone location=aws project=tw-sparty env=real
+en-sparty-mongod-s1-0.cocone location=aws project=tw-sparty env=real
+en-sparty-mongod-s1-1.cocone location=aws project=tw-sparty env=real
+en-sparty-mongod-s1-2.cocone location=aws project=tw-sparty env=real
+en-sparty-mongod-s1-bi-0.cocone location=aws project=tw-sparty env=real
+en-sparty-mongod-s2-0.cocone location=aws project=tw-sparty env=real
+en-sparty-mongod-s2-1.cocone location=aws project=tw-sparty env=real
+en-sparty-mongod-s2-bi-0.cocone location=aws project=tw-sparty env=real
+[redis]
+en-sparty-redis-0.cocone location=aws project=tw-sparty env=real
+en-sparty-redis-1.cocone location=aws project=tw-sparty env=real
+en-sparty-redis-2.cocone location=aws project=tw-sparty env=real
+en-sparty-redis-3.cocone location=aws project=tw-sparty env=real
+en-sparty-redis-4.cocone location=aws project=tw-sparty env=real
+en-sparty-redis-5.cocone location=aws project=tw-sparty env=real
+

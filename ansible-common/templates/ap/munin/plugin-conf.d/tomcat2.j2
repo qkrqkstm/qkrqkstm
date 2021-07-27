@@ -1,0 +1,8 @@
+[tomcat2_*]
+env.host      localhost
+env.port      4930
+env.request   /manager/status?XML=true
+env.user      munin
+env.password  {{ ap_munin_plugin_tomcat2_password }}
+env.timeout   30
+env.connector "http-nio-4930"

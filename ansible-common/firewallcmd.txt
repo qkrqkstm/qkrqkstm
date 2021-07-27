@@ -1,0 +1,1566 @@
+kr2-minime-maria-0.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-mongod-0.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-maria-2.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-maria-3.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-maria-1.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-mongod-1.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-mongod-2.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-mongod-3.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minimelog-mongod-0.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minimelog-mongod-1.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-mongos-0.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-redis-0.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-redis-1.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-mongos-1.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-mongos-2.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-redis-2.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-ap-1.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-ap-0.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-ap-2.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-ap-3.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-cms-0.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-ap-4.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-ap-5.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-ap-6.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-alpha-1.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-mq-0.ccn | CHANGED | rc=0 >>
+public
+  target: default
+  icmp-block-inversion: no
+  interfaces: 
+  sources: 
+  services: dhcpv6-client
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="202.94.128.228" service name="ssh" accept
+	rule family="ipv4" source address="152.165.119.106" service name="ssh" accept
+	rule family="ipv4" source address="150.249.235.253" service name="ssh" accept
+	rule family="ipv4" source address="13.114.208.147" service name="ssh" accept
+	rule family="ipv4" source address="54.65.195.20" service name="ssh" accept
+	rule family="ipv4" source address="52.199.176.73" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" service name="ssh" accept
+	rule family="ipv4" source address="202.94.128.228/32" port port="5672" protocol="tcp" accept
+	rule family="ipv4" source address="202.94.128.228/32" port port="15672" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.208.147/32" port port="5672" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.208.147/32" port port="15672" protocol="tcp" accept
+	rule family="ipv4" source address="39.110.217.81/32" port port="5672" protocol="tcp" accept
+	rule family="ipv4" source address="39.110.217.81/32" port port="15672" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46/32" port port="5672" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46/32" port port="15672" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47/32" port port="5672" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47/32" port port="15672" protocol="tcp" accept
+	rule family="ipv4" source address="52.199.176.73/32" port port="5672" protocol="tcp" accept
+	rule family="ipv4" source address="52.199.176.73/32" port port="15672" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.39.138/32" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.39.31/32" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.102.35/32" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.102.35/32" port port="5672" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.102.35/32" port port="15672" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143/32" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="54.249.14.95/32" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="54.249.14.95/32" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143/32" port port="4949" protocol="tcp" accept
+kr2-minime-alpha-3.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-mq-1.ccn | CHANGED | rc=0 >>
+public
+  target: default
+  icmp-block-inversion: no
+  interfaces: 
+  sources: 
+  services: dhcpv6-client
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="202.94.128.228" service name="ssh" accept
+	rule family="ipv4" source address="152.165.119.106" service name="ssh" accept
+	rule family="ipv4" source address="150.249.235.253" service name="ssh" accept
+	rule family="ipv4" source address="13.114.208.147" service name="ssh" accept
+	rule family="ipv4" source address="54.65.195.20" service name="ssh" accept
+	rule family="ipv4" source address="52.199.176.73" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" service name="ssh" accept
+	rule family="ipv4" source address="202.94.128.228/32" port port="5672" protocol="tcp" accept
+	rule family="ipv4" source address="202.94.128.228/32" port port="15672" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.208.147/32" port port="5672" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.208.147/32" port port="15672" protocol="tcp" accept
+	rule family="ipv4" source address="39.110.217.81/32" port port="5672" protocol="tcp" accept
+	rule family="ipv4" source address="39.110.217.81/32" port port="15672" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46/32" port port="5672" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46/32" port port="15672" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47/32" port port="5672" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47/32" port port="15672" protocol="tcp" accept
+	rule family="ipv4" source address="52.199.176.73/32" port port="5672" protocol="tcp" accept
+	rule family="ipv4" source address="52.199.176.73/32" port port="15672" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.39.138/32" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.39.31/32" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.102.35/32" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.102.35/32" port port="5672" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.102.35/32" port port="15672" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143/32" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="54.249.14.95/32" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="54.249.14.95/32" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143/32" port port="4949" protocol="tcp" accept
+kr2-minime-alpha-2.ccn | CHANGED | rc=0 >>
+public
+  target: default
+  icmp-block-inversion: no
+  interfaces: 
+  sources: 
+  services: dhcpv6-client
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="202.94.128.228" service name="ssh" accept
+	rule family="ipv4" source address="152.165.119.106" service name="ssh" accept
+	rule family="ipv4" source address="150.249.235.253" service name="ssh" accept
+	rule family="ipv4" source address="13.114.208.147" service name="ssh" accept
+	rule family="ipv4" source address="54.65.195.20" service name="ssh" accept
+	rule family="ipv4" source address="52.199.176.73" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" service name="ssh" accept
+	rule family="ipv4" source address="202.94.128.228" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="152.165.119.106" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="150.249.235.253" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="54.249.14.95/32" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143/32" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143/32" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="54.249.14.95/32" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.102.38/32" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.102.38/32" port port="40001" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.102.34/32" port port="40001" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.102.39/32" port port="40001" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.102.39/32" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="152.165.119.106/32" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="150.249.235.253/32" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="202.94.128.228/32" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.208.147/32" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="39.110.217.81/32" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="54.65.195.20/32" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="52.199.176.73/32" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46/32" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47/32" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="52.78.242.85/32" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="152.165.119.106/32" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="150.249.235.253/32" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="202.94.128.228/32" port port="16061" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.208.147/32" port port="16061" protocol="tcp" accept
+	rule family="ipv4" source address="39.110.217.81/32" port port="16061" protocol="tcp" accept
+	rule family="ipv4" source address="54.65.195.20/32" port port="16061" protocol="tcp" accept
+	rule family="ipv4" source address="52.199.176.73/32" port port="16061" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46/32" port port="16061" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47/32" port port="16061" protocol="tcp" accept
+	rule family="ipv4" source address="52.78.242.85/32" port port="16061" protocol="tcp" accept
+	rule family="ipv4" source address="152.165.119.106/32" port port="16061" protocol="tcp" accept
+	rule family="ipv4" source address="150.249.235.253/32" port port="16061" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.39.31/32" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="https" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="http" accept
+kr2-minime-alpha-0.ccn | CHANGED | rc=0 >>
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: eth0
+  sources: 
+  services: dhcpv6-client
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="202.94.128.228" service name="ssh" accept
+	rule family="ipv4" source address="13.114.208.147" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" service name="ssh" accept
+	rule family="ipv4" source address="54.249.14.95" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="54.249.14.95" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="54.65.195.20" service name="ssh" accept
+	rule family="ipv4" source address="52.199.176.73" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" service name="ssh" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="https" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="http" accept
+	rule family="ipv4" source address="152.165.119.106" service name="ssh" accept
+	rule family="ipv4" source address="150.249.235.253" service name="ssh" accept
+	rule family="ipv4" source address="54.249.14.95" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="202.94.128.228/32" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.208.147/32" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="39.110.217.81/32" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="54.65.195.20/32" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="52.199.176.73/32" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46/32" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47/32" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="52.78.242.85/32" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179/32" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88/32" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="152.165.119.106/32" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="150.249.235.253/32" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="202.94.128.228/32" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.208.147/32" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="39.110.217.81/32" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="54.65.195.20/32" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="52.199.176.73/32" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46/32" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47/32" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="52.78.242.85/32" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="152.165.119.106/32" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="150.249.235.253/32" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="202.94.128.228/32" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.208.147/32" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="39.110.217.81/32" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="54.65.195.20/32" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="52.199.176.73/32" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46/32" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47/32" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="52.78.242.85/32" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="152.165.119.106/32" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="150.249.235.253/32" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="202.94.128.228/32" port port="16061" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.208.147/32" port port="16061" protocol="tcp" accept
+	rule family="ipv4" source address="39.110.217.81/32" port port="16061" protocol="tcp" accept
+	rule family="ipv4" source address="54.65.195.20/32" port port="16061" protocol="tcp" accept
+	rule family="ipv4" source address="52.199.176.73/32" port port="16061" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46/32" port port="16061" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47/32" port port="16061" protocol="tcp" accept
+	rule family="ipv4" source address="52.78.242.85/32" port port="16061" protocol="tcp" accept
+	rule family="ipv4" source address="152.165.119.106/32" port port="16061" protocol="tcp" accept
+	rule family="ipv4" source address="150.249.235.253/32" port port="16061" protocol="tcp" accept
+	rule family="ipv4" source address="34.85.24.23/32" port port="3306" protocol="tcp" accept
+coconekr-reserve-0.ccn | CHANGED | rc=0 >>
+public
+  target: default
+  icmp-block-inversion: no
+  interfaces: 
+  sources: 
+  services: dhcpv6-client
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="202.94.128.228" service name="ssh" accept
+	rule family="ipv4" source address="13.114.208.147" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" service name="ssh" accept
+	rule family="ipv4" source address="54.249.14.95" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="54.249.14.95" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="54.65.195.20" service name="ssh" accept
+	rule family="ipv4" source address="52.199.176.73" service name="ssh" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="https" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="http" accept
+	rule family="ipv4" source address="52.79.102.179" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" service name="ssh" accept
+	rule family="ipv4" source address="152.165.119.106" service name="ssh" accept
+	rule family="ipv4" source address="150.249.235.253" service name="ssh" accept
+	rule family="ipv4" source address="202.94.128.228/32" port port="5672" protocol="tcp" accept
+	rule family="ipv4" source address="202.94.128.228/32" port port="15672" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.208.147/32" port port="5672" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.208.147/32" port port="15672" protocol="tcp" accept
+	rule family="ipv4" source address="39.110.217.81/32" port port="5672" protocol="tcp" accept
+	rule family="ipv4" source address="39.110.217.81/32" port port="15672" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46/32" port port="5672" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46/32" port port="15672" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47/32" port port="5672" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47/32" port port="15672" protocol="tcp" accept
+	rule family="ipv4" source address="52.199.176.73/32" port port="5672" protocol="tcp" accept
+	rule family="ipv4" source address="52.199.176.73/32" port port="15672" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.39.138/32" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.39.31/32" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.102.35/32" port port="5672" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.102.35/32" port port="15672" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.102.35/32" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="10.15.0.99/32" port port="9301" protocol="tcp" accept
+	rule family="ipv4" source address="10.15.0.99/32" port port="9201" protocol="tcp" accept
+	rule family="ipv4" source address="10.71.32.34/32" port port="9301" protocol="tcp" accept
+	rule family="ipv4" source address="10.71.32.34/32" port port="9201" protocol="tcp" accept
+coconekr-reserve-1.ccn | CHANGED | rc=0 >>
+public
+  target: default
+  icmp-block-inversion: no
+  interfaces: 
+  sources: 
+  services: dhcpv6-client
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="202.94.128.228" service name="ssh" accept
+	rule family="ipv4" source address="13.114.208.147" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" service name="ssh" accept
+	rule family="ipv4" source address="54.249.14.95" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="54.249.14.95" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="54.65.195.20" service name="ssh" accept
+	rule family="ipv4" source address="52.199.176.73" service name="ssh" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="https" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="http" accept
+	rule family="ipv4" source address="52.79.102.179" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" service name="ssh" accept
+	rule family="ipv4" source address="152.165.119.106" service name="ssh" accept
+	rule family="ipv4" source address="150.249.235.253" service name="ssh" accept
+coconekr-reserve-2.ccn | CHANGED | rc=0 >>
+public
+  target: default
+  icmp-block-inversion: no
+  interfaces: 
+  sources: 
+  services: dhcpv6-client
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="54.65.195.20" service name="ssh" accept
+	rule family="ipv4" source address="52.199.176.73" service name="ssh" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="https" accept
+	rule family="ipv4" source address="52.79.102.179" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" service name="ssh" accept
+	rule family="ipv4" source address="202.94.128.228" service name="ssh" accept
+	rule family="ipv4" source address="152.165.119.106" service name="ssh" accept
+	rule family="ipv4" source address="150.249.235.253" service name="ssh" accept
+	rule family="ipv4" source address="13.114.208.147" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" service name="ssh" accept
+tane-s1-mongod-0.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-s1-mongod-1.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-s1-mongod-2.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-s1-mongod-3.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-s1-mongod-4.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-beta-0.ccn | CHANGED | rc=0 >>
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: eth0
+  sources: 
+  services: dhcpv6-client
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="54.249.14.95" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="443" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="443" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="39.110.217.81" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" port port="8080" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="17072" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="17073" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="3930" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" service name="ssh" accept
+	rule family="ipv4" source address="121.160.237.27" port port="17072" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="80" protocol="tcp" accept
+	rule family="ipv4" source address="10.0.0.0/8" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" service name="ssh" accept
+	rule family="ipv4" source address="39.110.217.81" port port="6100" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="6101" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="80" protocol="tcp" accept
+	rule family="ipv4" source address="52.199.176.73" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" port port="3930" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="6102" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="17073" protocol="tcp" accept
+	rule family="ipv4" source address="202.94.128.228" service name="ssh" accept
+	rule family="ipv4" source address="121.160.237.27" port port="17073" protocol="tcp" accept
+	rule family="ipv4" source address="122.249.147.178" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" port port="6102" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="6101" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.208.147" service name="ssh" accept
+	rule family="ipv4" source address="54.65.195.20" service name="ssh" accept
+	rule family="ipv4" source address="13.114.86.192" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" port port="80" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="8080" protocol="tcp" accept
+	rule family="ipv4" source address="54.249.14.95" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="6102" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="6101" protocol="tcp" accept
+	rule family="ipv4" source address="122.249.147.178/32" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" port port="443" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" port port="17072" protocol="tcp" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="https" accept
+	rule family="ipv4" source address="39.110.217.81" port port="6101" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="http" accept
+	rule family="ipv4" source address="152.165.119.106" service name="ssh" accept
+	rule family="ipv4" source address="150.249.235.253" service name="ssh" accept
+	rule family="ipv4" source address="152.165.119.106" port port="6100" protocol="tcp" accept
+	rule family="ipv4" source address="150.249.235.253" port port="6100" protocol="tcp" accept
+	rule family="ipv4" source address="152.165.119.106" port port="6101" protocol="tcp" accept
+	rule family="ipv4" source address="150.249.235.253" port port="6101" protocol="tcp" accept
+tane-s1-mongod-5.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-s2-mongod-0.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-s2-mongod-1.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-s2-mongod-2.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-s2-mongod-3.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+kr2-minime-dev-0.ccn | CHANGED | rc=0 >>
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: eth0
+  sources: 
+  services: dhcpv6-client
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  sourceports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="54.249.14.95" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="443" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="443" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="39.110.217.81" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" port port="17072" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="202.94.128.228" service name="ssh" accept
+	rule family="ipv4" source address="121.160.237.27" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="3930" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" service name="ssh" accept
+	rule family="ipv4" source address="121.160.237.27" port port="17072" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="80" protocol="tcp" accept
+	rule family="ipv4" source address="10.0.0.0/8" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" port port="6101" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="80" protocol="tcp" accept
+	rule family="ipv4" source address="52.199.176.73" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" port port="3930" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="6102" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="17073" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="17073" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="17073" protocol="tcp" accept
+	rule family="ipv4" source address="122.249.147.178" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" port port="6102" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="6101" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.208.147" service name="ssh" accept
+	rule family="ipv4" source address="54.65.195.20" service name="ssh" accept
+	rule family="ipv4" source address="13.114.86.192" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" port port="80" protocol="tcp" accept
+	rule family="ipv4" source address="54.249.14.95" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="6102" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="6101" protocol="tcp" accept
+	rule family="ipv4" source address="122.249.147.178/32" service name="ssh" accept
+	rule family="ipv4" source address="150.249.235.253" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" port port="443" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" port port="17072" protocol="tcp" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="https" accept
+	rule family="ipv4" source address="152.165.119.106" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="http" accept
+tane-mongos-0.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-mongos-1.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-mongos-2.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-log-mongod-0.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-log-mongod-1.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-log-mongos-0.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-log-mongos-1.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-log-mongos-2.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-redis-0.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-redis-2.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-redis-3.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-redis-1.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-redis-4.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-redis-5.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-redis-6.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-redis-7.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-redis-10.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-redis-8.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-redis-9.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-redis-12.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-ap-0.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-ap-1.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-redis-11.ccn | CHANGED | rc=0 >>
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: eth0
+  sources: 
+  services: dhcpv6-client
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  sourceports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="54.249.14.95" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="443" protocol="tcp" accept
+	rule family="ipv4" source address="39.110.217.81" service name="ssh" accept
+	rule family="ipv4" source address="121.160.237.27" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="17072" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" service name="ssh" accept
+	rule family="ipv4" source address="121.160.237.27" port port="80" protocol="tcp" accept
+	rule family="ipv4" source address="52.199.176.73" service name="ssh" accept
+	rule family="ipv4" source address="121.160.237.27" port port="6102" protocol="tcp" accept
+	rule family="ipv4" source address="202.94.128.228" service name="ssh" accept
+	rule family="ipv4" source address="121.160.237.27" port port="17073" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="6101" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.208.147" service name="ssh" accept
+	rule family="ipv4" source address="54.65.195.20" service name="ssh" accept
+	rule family="ipv4" source address="13.114.86.192" service name="ssh" accept
+	rule family="ipv4" source address="54.249.14.95" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="150.249.235.253" service name="ssh" accept
+	rule family="ipv4" source address="54.250.171.143" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="39.110.217.76" service name="ssh" accept
+	rule family="ipv4" source address="121.160.237.27" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" service name="ssh" accept
+	rule family="ipv4" source address="152.165.119.106" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" service name="ssh" accept
+tane-ap-2.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-ap-3.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-ap-5.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-ap-4.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-redis-13.ccn | CHANGED | rc=0 >>
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: eth0
+  sources: 
+  services: dhcpv6-client
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  sourceports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="54.249.14.95" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="443" protocol="tcp" accept
+	rule family="ipv4" source address="39.110.217.81" service name="ssh" accept
+	rule family="ipv4" source address="39.110.217.76" service name="ssh" accept
+	rule family="ipv4" source address="54.250.171.143" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="17072" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" service name="ssh" accept
+	rule family="ipv4" source address="121.160.237.27" port port="80" protocol="tcp" accept
+	rule family="ipv4" source address="52.199.176.73" service name="ssh" accept
+	rule family="ipv4" source address="121.160.237.27" port port="6102" protocol="tcp" accept
+	rule family="ipv4" source address="202.94.128.228" service name="ssh" accept
+	rule family="ipv4" source address="121.160.237.27" port port="17073" protocol="tcp" accept
+	rule family="ipv4" source address="122.249.147.178" service name="ssh" accept
+	rule family="ipv4" source address="121.160.237.27" port port="6101" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.208.147" service name="ssh" accept
+	rule family="ipv4" source address="54.65.195.20" service name="ssh" accept
+	rule family="ipv4" source address="13.114.86.192" service name="ssh" accept
+	rule family="ipv4" source address="54.249.14.95" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="150.249.235.253" service name="ssh" accept
+	rule family="ipv4" source address="54.250.171.143" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" service name="ssh" accept
+	rule family="ipv4" source address="152.165.119.106" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" service name="ssh" accept
+tane-ap-6.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-ap-8.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-ap-9.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-ap-7.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-ap-10.ccn | CHANGED | rc=0 >>
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: eth0
+  sources: 
+  services: dhcpv6-client
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  sourceports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="1.231.85.46" port port="48501" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48504" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47509" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48200" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48505" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48500" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47508" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48504" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47501" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48502" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48505" protocol="tcp" accept
+	rule family="ipv4" source address="39.110.217.81" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48501" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48501" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48504" protocol="tcp" accept
+	rule family="ipv4" source address="54.249.14.95" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47104" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48507" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47105" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48502" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48105" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48502" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48509" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48508" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48100" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48103" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48509" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48104" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" service name="ssh" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48508" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47504" protocol="tcp" accept
+	rule family="ipv4" source address="52.199.176.73" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48200" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.208.147" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48508" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48503" protocol="tcp" accept
+	rule family="ipv4" source address="202.94.128.228" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48100" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48505" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47505" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48502" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48508" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48509" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47506" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47100" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48508" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48200" protocol="tcp" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="http" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48500" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47503" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48507" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48503" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47103" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48506" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47500" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48507" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47101" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48506" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47102" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48509" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48501" protocol="tcp" accept
+	rule family="ipv4" source address="122.249.147.178" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48507" protocol="tcp" accept
+	rule family="ipv4" source address="54.65.195.20" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48200" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48500" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48500" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48100" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48505" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48503" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48100" protocol="tcp" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="https" accept
+	rule family="ipv4" source address="152.165.119.106" service name="ssh" accept
+	rule family="ipv4" source address="54.249.14.95" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48509" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48502" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48507" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48506" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48505" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48504" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48102" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48503" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48506" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48503" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48504" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.86.192" service name="ssh" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47507" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47502" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48101" protocol="tcp" accept
+	rule family="ipv4" source address="150.249.235.253" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48500" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48100" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48506" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48501" protocol="tcp" accept
+tane-ap-11.ccn | CHANGED | rc=0 >>
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: eth0
+  sources: 
+  services: dhcpv6-client
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  sourceports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="1.231.85.46" port port="48501" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48504" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47509" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48200" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48505" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48500" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47508" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48504" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47501" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48502" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48505" protocol="tcp" accept
+	rule family="ipv4" source address="39.110.217.81" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48501" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48501" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48504" protocol="tcp" accept
+	rule family="ipv4" source address="54.249.14.95" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47104" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48507" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47105" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48502" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48105" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48502" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48509" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48508" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48100" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48103" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48509" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48104" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" service name="ssh" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48508" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47504" protocol="tcp" accept
+	rule family="ipv4" source address="52.199.176.73" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48200" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.208.147" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48508" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48503" protocol="tcp" accept
+	rule family="ipv4" source address="202.94.128.228" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48100" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48505" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47505" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48502" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48508" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48509" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47506" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47100" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48508" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48200" protocol="tcp" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="http" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48500" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47503" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48507" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48503" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47103" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48506" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47500" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48507" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47101" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48506" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47102" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48509" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48501" protocol="tcp" accept
+	rule family="ipv4" source address="122.249.147.178" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48507" protocol="tcp" accept
+	rule family="ipv4" source address="54.65.195.20" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48200" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48500" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48500" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48100" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48505" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48503" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48100" protocol="tcp" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="https" accept
+	rule family="ipv4" source address="152.165.119.106" service name="ssh" accept
+	rule family="ipv4" source address="54.249.14.95" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48509" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48502" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48507" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48506" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48505" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48504" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48102" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48503" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48506" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48503" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48504" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.86.192" service name="ssh" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47507" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47502" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48101" protocol="tcp" accept
+	rule family="ipv4" source address="150.249.235.253" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48500" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48100" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48506" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48501" protocol="tcp" accept
+tane-ap-12.ccn | CHANGED | rc=0 >>
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: eth0
+  sources: 
+  services: dhcpv6-client
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  sourceports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="1.231.85.46" port port="48501" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48504" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47509" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48200" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48505" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48500" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47508" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48504" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47501" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48502" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48505" protocol="tcp" accept
+	rule family="ipv4" source address="39.110.217.81" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48501" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48501" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48504" protocol="tcp" accept
+	rule family="ipv4" source address="54.249.14.95" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47104" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48507" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47105" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48502" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48105" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48502" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48509" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48508" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48100" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48103" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48509" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48104" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" service name="ssh" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48508" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47504" protocol="tcp" accept
+	rule family="ipv4" source address="52.199.176.73" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48200" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.208.147" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48508" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48503" protocol="tcp" accept
+	rule family="ipv4" source address="202.94.128.228" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48100" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48505" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47505" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48502" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48508" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48509" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47506" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47100" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48508" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48200" protocol="tcp" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="http" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48500" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47503" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48507" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48503" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47103" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48506" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47500" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48507" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47101" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48506" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47102" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48509" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48501" protocol="tcp" accept
+	rule family="ipv4" source address="122.249.147.178" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48507" protocol="tcp" accept
+	rule family="ipv4" source address="54.65.195.20" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48200" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48500" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48500" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48100" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48505" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48503" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48100" protocol="tcp" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="https" accept
+	rule family="ipv4" source address="152.165.119.106" service name="ssh" accept
+	rule family="ipv4" source address="54.249.14.95" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48509" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48502" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48507" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48506" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48505" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48504" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48102" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48503" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48506" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48503" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48504" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.86.192" service name="ssh" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47507" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47502" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48101" protocol="tcp" accept
+	rule family="ipv4" source address="150.249.235.253" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48500" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48100" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48506" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48501" protocol="tcp" accept
+tane-ap-13.ccn | CHANGED | rc=0 >>
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: eth0
+  sources: 
+  services: dhcpv6-client
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  sourceports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="1.231.85.46" port port="48501" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48504" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47509" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48200" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48505" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48500" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47508" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48504" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47501" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48502" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48505" protocol="tcp" accept
+	rule family="ipv4" source address="39.110.217.81" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48501" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48501" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48504" protocol="tcp" accept
+	rule family="ipv4" source address="54.249.14.95" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47104" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48507" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47105" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48502" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48105" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48502" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48509" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48508" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48100" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48103" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48509" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48104" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" service name="ssh" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48508" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47504" protocol="tcp" accept
+	rule family="ipv4" source address="52.199.176.73" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48200" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.208.147" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48508" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48503" protocol="tcp" accept
+	rule family="ipv4" source address="202.94.128.228" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48100" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48505" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47505" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48502" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48508" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48509" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47506" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47100" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48508" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48200" protocol="tcp" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="http" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48500" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47503" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48507" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48503" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47103" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48506" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47500" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48507" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47101" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48506" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47102" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48509" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48501" protocol="tcp" accept
+	rule family="ipv4" source address="122.249.147.178" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48507" protocol="tcp" accept
+	rule family="ipv4" source address="54.65.195.20" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48200" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48500" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48500" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48100" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48505" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48503" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48100" protocol="tcp" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="https" accept
+	rule family="ipv4" source address="152.165.119.106" service name="ssh" accept
+	rule family="ipv4" source address="54.249.14.95" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48509" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48502" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48507" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48506" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48505" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48504" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48102" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48503" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48506" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48503" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48504" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.86.192" service name="ssh" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47507" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="47502" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48101" protocol="tcp" accept
+	rule family="ipv4" source address="150.249.235.253" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48500" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="48100" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48506" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48501" protocol="tcp" accept
+tane-cms-0.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-ap-14.ccn | CHANGED | rc=0 >>
+public
+  target: default
+  icmp-block-inversion: no
+  interfaces: 
+  sources: 
+  services: dhcpv6-client
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="202.94.128.228" service name="ssh" accept
+	rule family="ipv4" source address="152.165.119.106" service name="ssh" accept
+	rule family="ipv4" source address="150.249.235.253" service name="ssh" accept
+	rule family="ipv4" source address="13.114.208.147" service name="ssh" accept
+	rule family="ipv4" source address="54.65.195.20" service name="ssh" accept
+	rule family="ipv4" source address="52.199.176.73" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" service name="ssh" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="http" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="https" accept
+	rule family="ipv4" source address="39.110.217.81" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48100" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48200" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48500" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48501" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48502" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48503" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48504" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48505" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48506" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48507" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48508" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="48509" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48100" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48200" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48500" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48501" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48502" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48503" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48504" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48505" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48506" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48507" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48508" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="48509" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48100" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48200" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48500" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48501" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48502" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48503" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48504" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48505" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48506" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48507" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48508" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="48509" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48100" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48200" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48500" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48501" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48502" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48503" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48504" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48505" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48506" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48507" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48508" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="48509" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" port port="16006" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="16006" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="16006" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="16006" protocol="tcp" accept
+tane-mq-0.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-mq-1.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-elk-0.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-elk-1.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-alpha-3.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-alpha-0.ccn | FAILED | rc=127 >>
+/bin/sh: firewall-cmd: command not foundnon-zero return code
+tane-alpha-illustrated-ap-0.ccn | CHANGED | rc=0 >>
+public
+  target: default
+  icmp-block-inversion: no
+  interfaces: 
+  sources: 
+  services: dhcpv6-client
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="202.94.128.228" service name="ssh" accept
+	rule family="ipv4" source address="39.110.217.81" service name="ssh" accept
+	rule family="ipv4" source address="13.114.208.147" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" service name="ssh" accept
+	rule family="ipv4" source address="54.249.14.95" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="54.249.14.95" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="http" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="https" accept
+	rule family="ipv4" source address="1.231.85.46" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="54.65.195.20" service name="ssh" accept
+	rule family="ipv4" source address="52.199.176.73" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" service name="ssh" accept
+	rule family="ipv4" source address="121.160.237.27" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="17072" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="17073" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="80" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="443" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="6101" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="6102" protocol="tcp" accept
+	rule family="ipv4" source address="152.165.119.106" service name="ssh" accept
+	rule family="ipv4" source address="150.249.235.253" service name="ssh" accept
+tane-alpha-1.ccn | CHANGED | rc=0 >>
+public
+  target: default
+  icmp-block-inversion: no
+  interfaces: 
+  sources: 
+  services: dhcpv6-client
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="202.94.128.228" service name="ssh" accept
+	rule family="ipv4" source address="152.165.119.106" service name="ssh" accept
+	rule family="ipv4" source address="150.249.235.253" service name="ssh" accept
+	rule family="ipv4" source address="13.114.208.147" service name="ssh" accept
+	rule family="ipv4" source address="54.65.195.20" service name="ssh" accept
+	rule family="ipv4" source address="52.199.176.73" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" service name="ssh" accept
+	rule family="ipv4" source address="211.249.65.0/32" port port="7000" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/32" port port="17000" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/32" port port="17001" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/32" port port="7001" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.234" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.234" port port="17070" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.234" port port="7000" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.234" port port="7001" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.234" port port="17001" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.234" port port="17000" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="7000" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="7001" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="7002" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.39.0/24" port port="17000" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.39.0/24" port port="17001" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.39.0/24" port port="17002" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="17000" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="17001" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="17002" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46/32" port port="17000" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47/32" port port="17000" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46/32" port port="17001" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47/32" port port="17001" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46/32" port port="17002" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47/32" port port="17002" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46/32" port port="7000" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47/32" port port="7000" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46/32" port port="7001" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47/32" port port="7001" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46/32" port port="7002" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47/32" port port="7002" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179/32" port port="7000" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88/32" port port="7000" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179/32" port port="7001" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88/32" port port="7001" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179/32" port port="17000" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88/32" port port="17000" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179/32" port port="17001" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88/32" port port="17001" protocol="tcp" accept
+tane-alpha-2.ccn | CHANGED | rc=0 >>
+public
+  target: default
+  icmp-block-inversion: no
+  interfaces: 
+  sources: 
+  services: dhcpv6-client
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="202.94.128.228" service name="ssh" accept
+	rule family="ipv4" source address="152.165.119.106" service name="ssh" accept
+	rule family="ipv4" source address="150.249.235.253" service name="ssh" accept
+	rule family="ipv4" source address="13.114.208.147" service name="ssh" accept
+	rule family="ipv4" source address="54.65.195.20" service name="ssh" accept
+	rule family="ipv4" source address="52.199.176.73" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" service name="ssh" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="http" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="https" accept
+	rule family="ipv4" source address="211.249.65.0/32" port port="7000" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/32" port port="17001" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/32" port port="7001" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.234" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.234" port port="17070" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.234" port port="7000" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.234" port port="7001" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.234" port port="17001" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.234" port port="17000" protocol="tcp" accept
+	rule family="ipv4" source address="54.249.14.95/32" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143/32" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143/32" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="54.249.14.95/32" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="7000" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="7001" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="7002" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.39.0/24" port port="17000" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.39.0/24" port port="17001" protocol="tcp" accept
+	rule family="ipv4" source address="10.101.39.0/24" port port="17002" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="17000" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="17001" protocol="tcp" accept
+	rule family="ipv4" source address="211.249.65.0/24" port port="17002" protocol="tcp" accept
+	rule family="ipv4" source address="0.0.0.0/0" port port="60001" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46/32" port port="17000" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47/32" port port="17000" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46/32" port port="17001" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47/32" port port="17001" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46/32" port port="17002" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47/32" port port="17002" protocol="tcp" accept
+	rule family="ipv4" source address="10.15.0.0/16" port port="17000" protocol="tcp" accept
+	rule family="ipv4" source address="10.15.0.0/16" port port="17001" protocol="tcp" accept
+	rule family="ipv4" source address="10.15.0.0/16" port port="17002" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46/32" port port="7000" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47/32" port port="7000" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46/32" port port="7001" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47/32" port port="7001" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46/32" port port="7002" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47/32" port port="7002" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179/32" port port="7000" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88/32" port port="7000" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179/32" port port="7001" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88/32" port port="7001" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179/32" port port="17000" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88/32" port port="17000" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179/32" port port="17001" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88/32" port port="17001" protocol="tcp" accept
+tane-config-0.ccn | CHANGED | rc=0 >>
+public
+  target: default
+  icmp-block-inversion: no
+  interfaces: 
+  sources: 
+  services: dhcpv6-client
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="202.94.128.228" service name="ssh" accept
+	rule family="ipv4" source address="152.165.119.106" service name="ssh" accept
+	rule family="ipv4" source address="150.249.235.253" service name="ssh" accept
+	rule family="ipv4" source address="13.114.208.147" service name="ssh" accept
+	rule family="ipv4" source address="54.65.195.20" service name="ssh" accept
+	rule family="ipv4" source address="52.199.176.73" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" port port="16006" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="16006" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" port port="16006" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.102.179" port port="16006" protocol="tcp" accept
+	rule family="ipv4" source address="202.94.128.228" port port="16006" protocol="tcp" accept
+	rule family="ipv4" source address="152.165.119.106" port port="16006" protocol="tcp" accept
+	rule family="ipv4" source address="150.249.235.253" port port="16006" protocol="tcp" accept
+	rule family="ipv4" source address="52.199.176.73" port port="16006" protocol="tcp" accept
+	rule family="ipv4" source address="54.65.195.20" port port="16006" protocol="tcp" accept
+tane-alpha-illustrated-ap-1.ccn | CHANGED | rc=0 >>
+public
+  target: default
+  icmp-block-inversion: no
+  interfaces: 
+  sources: 
+  services: dhcpv6-client
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="202.94.128.228" service name="ssh" accept
+	rule family="ipv4" source address="39.110.217.81" service name="ssh" accept
+	rule family="ipv4" source address="13.114.208.147" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" service name="ssh" accept
+	rule family="ipv4" source address="54.249.14.95" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="54.249.14.95" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="http" accept
+	rule family="ipv4" source address="0.0.0.0/0" service name="https" accept
+	rule family="ipv4" source address="1.231.85.46" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.47" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="54.65.195.20" service name="ssh" accept
+	rule family="ipv4" source address="52.199.176.73" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" service name="ssh" accept
+	rule family="ipv4" source address="121.160.237.27" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="17072" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="17073" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="80" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="443" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="6101" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="6102" protocol="tcp" accept
+	rule family="ipv4" source address="152.165.119.106" service name="ssh" accept
+	rule family="ipv4" source address="150.249.235.253" service name="ssh" accept
+tane-archive-mongo-0.ccn | CHANGED | rc=0 >>
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: eth0
+  sources: 
+  services: dhcpv6-client
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  sourceports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="54.249.14.95" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="443" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="39.110.217.81" service name="ssh" accept
+	rule family="ipv4" source address="39.110.217.76" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="202.94.128.228" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="17072" protocol="tcp" accept
+	rule family="ipv4" source address="1.231.85.46" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" service name="ssh" accept
+	rule family="ipv4" source address="13.114.208.147" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="52.199.176.73" service name="ssh" accept
+	rule family="ipv4" source address="121.160.237.27" port port="6102" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="152.165.119.106" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="202.94.128.228" service name="ssh" accept
+	rule family="ipv4" source address="121.160.237.27" port port="17073" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="80" protocol="tcp" accept
+	rule family="ipv4" source address="13.114.208.147" service name="ssh" accept
+	rule family="ipv4" source address="121.160.237.27" port port="6101" protocol="tcp" accept
+	rule family="ipv4" source address="54.65.195.20" service name="ssh" accept
+	rule family="ipv4" source address="13.114.86.192" service name="ssh" accept
+	rule family="ipv4" source address="54.249.14.95" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="150.249.235.253" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="52.199.176.73" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="150.249.235.253" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="39.110.217.76" service name="ssh" accept
+	rule family="ipv4" source address="121.160.237.27" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="52.79.103.88" service name="ssh" accept
+	rule family="ipv4" source address="54.65.195.20" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="34.85.24.23" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="39.110.217.81" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="152.165.119.106" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" port port="30001" protocol="tcp" accept
+tane-dev-0.ccn | CHANGED | rc=0 >>
+public
+  target: default
+  icmp-block-inversion: no
+  interfaces: 
+  sources: 
+  services: dhcpv6-client http https
+  ports: 
+  protocols: 
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="202.94.128.228" service name="ssh" accept
+	rule family="ipv4" source address="39.110.217.81" service name="ssh" accept
+	rule family="ipv4" source address="13.114.208.147" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.46" service name="ssh" accept
+	rule family="ipv4" source address="1.231.85.47" service name="ssh" accept
+	rule family="ipv4" source address="54.249.14.95" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="4949" protocol="tcp" accept
+	rule family="ipv4" source address="54.249.14.95" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="54.250.171.143" port port="10050" protocol="tcp" accept
+	rule family="ipv4" source address="54.65.195.20" service name="ssh" accept
+	rule family="ipv4" source address="52.199.176.73" service name="ssh" accept
+	rule family="ipv4" source address="52.79.102.179" service name="ssh" accept
+	rule family="ipv4" source address="52.79.103.88" service name="ssh" accept
+	rule family="ipv4" source address="121.160.237.27" port port="17071" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="17072" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="17073" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="30001" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="3306" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="80" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="443" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="6101" protocol="tcp" accept
+	rule family="ipv4" source address="121.160.237.27" port port="6102" protocol="tcp" accept
+	rule family="ipv4" source address="152.165.119.106" service name="ssh" accept
+	rule family="ipv4" source address="150.249.235.253" service name="ssh" accept

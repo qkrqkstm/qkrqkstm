@@ -1,0 +1,25 @@
+---
+
+- hosts: mongo, mongod, mongos, mongoc
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+    - block:
+      - name: configure /etc/fstab 
+        mount:
+          path: "{{ item.mount }}"
+          src: "UUID={{ item.uuid }}"
+          fstype: "{{ item.fstype }}"
+          opts: "defaults,noatime"
+          state: present
+        with_items: "{{ ansible_mounts }}"
+        when: item.mount == '/'
+
+      - name: disable the atime
+        shell: mount -o remount,defaults,noatime /
+        args:
+          warn: no
+      tags: atime_disable
+

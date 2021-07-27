@@ -1,0 +1,22 @@
+---
+
+- hosts: mongo, mongod, mongos, mongoc
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+
+    - name: set kernel parameter for mongo
+      when: ansible_distribution == 'CentOS' or ansible_distribution == "Amazon"
+      lineinfile: dest=/etc/rc.d/rc.local line={{ item }}
+      with_items:
+        - 'echo never > /sys/kernel/mm/transparent_hugepage/enabled'
+        - 'echo never > /sys/kernel/mm/transparent_hugepage/defrag'
+
+    - name: set kernel parameter for mongo
+      when: ansible_distribution == 'Ubuntu'
+      lineinfile: dest=/etc/rc.local line={{ item }}
+      with_items:
+        - 'echo never > /sys/kernel/mm/transparent_hugepage/enabled'
+        - 'echo never > /sys/kernel/mm/transparent_hugepage/defrag'

@@ -1,0 +1,26 @@
+---
+
+- hosts: cms
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+
+    - name: create cms user
+      user: name=cms
+            shell=/bin/bash
+            append=yes
+
+    - name: add SSH pubkey for www user
+      when: project == 'vita-en'
+      authorized_key: user=www key={{ item }}
+      with_file:
+        - "{{ inventory_dir }}/private/public_keys/www"
+        - "{{ inventory_dir }}/private/public_keys/son_yoohan"
+        - "{{ inventory_dir }}/private/public_keys/sung_younseok"
+
+    - name: add cms user pubkey
+      authorized_key: user=cms key="{{ item }}"
+      with_file:
+        - "{{ inventory_dir }}/private/public_keys/infra"

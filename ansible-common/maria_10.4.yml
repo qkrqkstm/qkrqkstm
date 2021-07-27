@@ -1,0 +1,10 @@
+---
+
+- include: './playbooks/maria/sysctl.yml'
+- include: './playbooks/maria/ulimit.yml'
+- include: './playbooks/mysql/mysql.yml'
+- include: './playbooks/maria/mariadb.yml'
+- include: './playbooks/maria/mariadb-10.2.yml'
+- include: './playbooks/maria/mariadb-10.4.yml'
+- include: './playbooks/maria/munin-plugins.yml'
+- include: './playbooks/maria/zabbix-agent.yml'

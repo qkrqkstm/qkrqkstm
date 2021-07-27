@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+
+    - name: configure sysctl
+      sysctl: sysctl_file=/etc/sysctl.conf state=present reload=yes name={{ item.name }} value={{ item.value }} ignoreerrors=yes
+      with_items:
+        - { name: 'vm.swappiness', value: '10' }

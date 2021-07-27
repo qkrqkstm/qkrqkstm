@@ -1,0 +1,23 @@
+---
+
+- hosts: mongoc
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+
+    - name: configure zabbix-agent mongoc user parameter
+      when: ansible_distribution == 'CentOS' or ansible_distribution == "Amazon"
+      notify: restart zabbix-agent
+      copy: src={{ inventory_dir }}/files/mongo/zabbix_agentd.d/userparameter_mongoc.conf dest=/etc/zabbix/zabbix_agentd.d/userparameter_mongodb.conf
+
+    - name: configure zabbix-agent mongoc user parameter
+      when: ansible_distribution == 'Ubuntu'
+      notify: restart zabbix-agent
+      copy: src={{ inventory_dir }}/files/mongo/zabbix_agentd.d/userparameter_mongoc.conf dest=/etc/zabbix/zabbix_agentd.conf.d/userparameter_mongodb.conf
+
+  handlers:
+
+    - name: restart zabbix-agent
+      service: name=zabbix-agent state=restarted enabled=yes

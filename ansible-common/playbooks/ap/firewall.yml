@@ -1,0 +1,21 @@
+---
+
+- hosts: ap, apdl, apup, apbill, wp, maint
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+
+    - name: configure firewall access to web from anywhere
+      notify: restart firewalld
+      when: ansible_distribution == 'CentOS' and ansible_distribution_major_version|int >= 7 and location == 'nbp'
+      firewalld: permanent=true zone=public state=enabled rich_rule="rule family=ipv4 source address={{ item.address }} service name={{ item.service }} accept"
+      with_items:
+        - { address: "0.0.0.0/0", service: "http" }
+        - { address: "0.0.0.0/0", service: "https" }
+
+  handlers:
+
+    - name: restart firewalld
+      service: name=firewalld state=restarted enabled=yes

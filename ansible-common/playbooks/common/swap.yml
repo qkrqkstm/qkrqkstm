@@ -1,0 +1,35 @@
+---
+
+- hosts: all
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  tasks:
+
+    - name: create swap space
+      when: ansible_swaptotal_mb < 1 and location == 'gcp'
+      command: dd if=/dev/zero of=/swap bs=1M count=1024
+
+    - name: set permission swap
+      when: location == 'gcp'
+      file:
+        path: /swap
+        owner: root
+        group: root
+        mode: 0600
+
+    - name: make swap
+      when: ansible_swaptotal_mb < 1 and location == 'gcp'
+      command: mkswap /swap
+
+    - name: add to /etc/fstab
+      when: location == 'gcp'
+      lineinfile:
+        path: /etc/fstab
+        regexp: '^/swap '
+        line: '/swap none swap sw 0 0'
+
+    - name: swap on
+      when: ansible_swaptotal_mb < 1 and location == 'gcp'
+      command: swapon -a
