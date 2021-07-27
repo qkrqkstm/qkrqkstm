@@ -1,7 +1,0 @@
----
-
-ap_l4ip: ''
-
-ap_munin_plugin_tomcat_password: ""
-ap_munin_plugin_tomcat2_password: ""
-ap_munin_plugins: []

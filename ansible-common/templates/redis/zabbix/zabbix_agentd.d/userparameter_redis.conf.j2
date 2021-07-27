@@ -1,5 +1,0 @@
-{% if redis_password %}
-UserParameter=redis.stat[*],/usr/local/redis/src/redis-cli -p {{ redis_port }} -a '{{ redis_password }}' info | grep "$1:" | cut -d":" -f2
-{% else %}
-UserParameter=redis.stat[*],/usr/local/redis/src/redis-cli -p {{ redis_port }} info | grep "$1:" | cut -d":" -f2
-{% endif %}

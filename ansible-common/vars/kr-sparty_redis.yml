@@ -1,4 +1,0 @@
----
-
-redis_port: 16061
-redis_password: "{{ lookup('file', '{{ inventory_dir }}/private/redis_password')|default(None) }}"

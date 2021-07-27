@@ -1,4 +1,0 @@
----
-
-mongod_port: 30001
-mongod_monitor_password: "{{ lookup('file', '{{ inventory_dir }}/private/mongod_monitor_password') }}"

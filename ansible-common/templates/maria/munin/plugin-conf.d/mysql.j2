@@ -1,8 +1,0 @@
-[mysql*]
-{% if rpm_mariadb.rc == 0 %}
-env.mysqlconnection DBI:mysql:mysql;host=localhost;port={{ mariadb_port }};mysql_socket=/var/lib/mysql/mysql.sock
-{% else %}
-env.mysqlconnection DBI:mysql:mysql;host=localhost;port={{ mariadb_port }};mysql_socket={{ mariadb_socket_path }}
-{% endif %}
-env.mysqluser monitor
-env.mysqlpassword {{ mariadb_monitor_password }}

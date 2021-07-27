@@ -1,6 +1,0 @@
-UserParameter=mysql.status[*],echo "show global status where Variable_name='$1';" | PATH={{ mariadb_path }} HOME=/var/lib/zabbix mysql --defaults-extra-file=/etc/zabbix/my.cnf -N | awk '{print $$2}'
-UserParameter=mysql.size[*],echo "select sum($(case "$3" in both|"") echo "data_length+index_length";; data|index) echo "$3_length";; free) echo "data_free";; esac)) from information_schema.tables$([[ "$1" = "all" || ! "$1" ]] || echo " where table_schema='$1'")$([[ "$2" = "all" || ! "$2" ]] || echo "and table_name='$2'");" | PATH={{ mariadb_path }} HOME=/var/lib/zabbix mysql --defaults-extra-file=/etc/zabbix/my.cnf -N
-UserParameter=mysql.ping, PATH={{ mariadb_path }} HOME=/var/lib/zabbix mysqladmin --defaults-extra-file=/etc/zabbix/my.cnf ping | grep -c alive
-UserParameter=mysql.version, PATH={{ mariadb_path }} mysql --defaults-extra-file=/etc/zabbix/my.cnf -V
-# for Replication
-UserParameter=mysql.replication[*],echo "show slave status\G" | PATH={{ mariadb_path }} HOME=/var/lib/zabbix mysql --defaults-extra-file=/etc/zabbix/my.cnf  | grep $1: | awk '{print $$2}'

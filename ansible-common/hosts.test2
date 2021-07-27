@@ -1,4 +1,0 @@
-[ap]
-#syf-bi-0.cocone location=aws project=vita env=real
-#tane-alpha-2.ccn location=nbp project=tane env=alpha
-tane-alpha-1.ccn location=nbp project=tane env=alpha

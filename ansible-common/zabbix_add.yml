@@ -1,4 +1,0 @@
----
-
-- include: './playbooks/common/zabbix-agent.yml'
-- include: './playbooks/redis/zabbix-agent.yml'

@@ -1,3 +1,0 @@
-%wheel ALL=(ALL) ALL
-Defaults timestamp_timeout  = 30
-Defaults passprompt         = "%u@%h Password: "
